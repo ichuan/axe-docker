@@ -7,8 +7,7 @@ WORKDIR /opt/coin
 EXPOSE 9337
 
 RUN apt-get update && apt-get install -y wget python
-# RUN wget https://github.com/AXErunners/axe/releases/download/v1.5.0.1/axecore-1.5.0.1-x86_64-linux-gnu.tar.gz -O - | tar --strip-components 1 -C /opt/coin -xzf -
-RUN wget https://talker.im/data/axecore-1.5.0.1-x86_64-linux-gnu.tar.gz -O - | tar --strip-components 1 -C /opt/coin -xzf -
+RUN wget https://github.com/AXErunners/axe/releases/download/v1.5.0.1/axecore-1.5.0.1-x86_64-linux-gnu.tar.gz -O - | tar --strip-components 1 -C /opt/coin -xzf -
 
 # cleanup
 RUN apt remove -y wget && apt autoremove -y && apt autoclean
